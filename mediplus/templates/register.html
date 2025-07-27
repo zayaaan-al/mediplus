@@ -1,0 +1,81 @@
+{% load static %}
+{% block content %}
+{% include "header.html" %}
+
+
+		<!-- Start Appointment -->
+		<section class="appointment">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>REGISTER NOW</h2>
+							<img src="{% static 'img/section-img.png' %}" alt="#">
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-12 col-12">
+						<form class="form" method="POST" action="register" enctype="multipart/form-data">
+							{% csrf_token %}
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="userphoto" type="file" placeholder="upload photo">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="username" type="text" placeholder="Name">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="useremail" type="email" placeholder="Email">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="userphone" type="number" placeholder="Phone">
+									</div>
+								</div>
+								
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input type="password" placeholder="password" name="userpassword">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input type="number" placeholder="age" name="userage">
+									</div>
+								</div>
+                              
+							
+							</div>
+							<div class="row">
+								<div class="col-lg-5 col-md-4 col-12">
+									<div class="form-group">
+										<div class="button">
+											<button type="submit" class="btn">REGISTER NOW</button>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-6 col-md-12 ">
+						<div class="appointment-image">
+							<img src="{% static 'img/contact-img.png' %}" alt="#">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Appointment -->
+		
+
+{% include "footer.html" %}
+{% endblock %}

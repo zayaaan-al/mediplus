@@ -1,0 +1,57 @@
+{% load static %}
+{% block content %}
+{% include "header.html" %}
+<head>
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}">
+
+<head>
+<body>
+	
+
+<div class="container d-flex justify-content-center mt-5">
+
+	<div class="card">
+		
+		<div class="top-container" style="margin-left: 70px;">
+			
+			<img src="" class="img-fluid profile-image" width="70">
+			
+			<!-- <div class="ml-3">
+				<h5 class="name">{{res.username}}</h5>
+				<p class="mail">{{res.useremail}}</p>
+			</div> -->
+		</div>
+
+
+		<div class="middle-container d-flex justify-content-between align-items-center mt-3 p-2">
+				<!-- <div class="dollar-div px-3">
+					
+					<div class="round-div"><i class="fa fa-dollar dollar"></i></div>
+
+				</div> -->
+				<div class="d-flex flex-column text-right mr-2" style="text-align:center;">
+					<span class="">user email: {{res.useremail}}</span>
+					<span class="" style="text-align:left;">username: {{res.username}} </span>
+					<span class="" style="text-align:left;">Age: {{res.userage}}</span>
+					<span class="" style="text-align:left;">phone: {{res.userphone}}</span>
+				</div>
+
+		</div>
+
+		<!-- <div class="recent-border mt-4">
+			<span class="recent-orders">Recent orders</span>
+		</div>
+		<div class="wishlist-border pt-2">
+			<span class="wishlist">Wishlist</span>
+		</div>
+		<div class="fashion-studio-border pt-2">
+			<span class="fashion-studio">Fashion studio</span>
+		</div> -->
+		
+	</div>
+	
+</div>
+</body>
+
+{% include "footer.html" %}
+{% endblock %}

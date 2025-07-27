@@ -1,0 +1,81 @@
+{% load static %}
+{% block content %}
+{% include "header.html" %}
+
+
+		<!-- Start Appointment -->
+		<section class="appointment">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-12">
+						<div class="section-title">
+							<h2>ADD DOCTORS</h2>
+							<img src="{% static 'img/section-img.png' %}" alt="#">
+							<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-lg-6 col-md-12 col-12">
+						<form class="form" method="POST" action="docadmin" enctype="multipart/form-data">
+							{% csrf_token %}
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="doctorphoto" type="file" placeholder="upload photo">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="doctorname" type="text" placeholder="name">
+									</div>
+								</div>
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input name="doctoremail" type="email" placeholder="email">
+									</div>
+								</div>
+								
+								<div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input type="number" placeholder="phone" name="doctorphone">
+									</div>
+								</div>
+                                <div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input type="textarea" placeholder="specification" name="doctorspecification">
+									</div>
+								</div>
+                                <div class="col-lg-6 col-md-6 col-12">
+									<div class="form-group">
+										<input type="number" placeholder="fees" name="doctorfees">
+									</div>
+								</div>
+                              
+							
+							</div>
+							<div class="row">
+								<div class="col-lg-5 col-md-4 col-12">
+									<div class="form-group">
+										<div class="button">
+											<button type="submit" class="btn">ADD</button>
+										</div>
+									</div>
+								</div>
+								
+							</div>
+						</form>
+					</div>
+					<div class="col-lg-6 col-md-12 ">
+						<div class="appointment-image">
+							<img src="{% static 'img/contact-img.png' %}" alt="#">
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- End Appointment -->
+		
+
+{% include "footer.html" %}
+{% endblock %}

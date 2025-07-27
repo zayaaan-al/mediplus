@@ -1,0 +1,57 @@
+{% load static %}
+{% block content %}
+{% include "header.html" %}
+
+<!-- Start Appointment -->
+<section class="appointment">
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-12">
+				<div class="section-title">
+					<h2>LOGIN?</h2>
+					<img src="{% static "img/section-img.png" %}" alt="#">
+					<p>Lorem ipsum dolor sit amet consectetur adipiscing elit praesent aliquet. pretiumts</p>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-12">
+				<form action="login" method = "POST">
+					{% csrf_token %}
+					
+					<div class="row">
+						<div class="col-lg-6 col-md-6 col-12">
+							<div>
+								<input name="useremail" type="email" placeholder="Email">
+							</div>
+						</div>
+						<div class="col-lg-6 col-md-6 col-12">
+							<div>
+								<input name="userpassword" type="password" placeholder="password">
+							</div>
+						</div>
+
+					</div>
+					<div class="row">
+						<div class="col-lg-5 col-md-4 col-12">
+							<div>
+								<div class="button">
+									<button type="submit" class="btn">LOGIN </button>
+								</div>
+							</div>
+						</div>
+						
+					</div>
+				</form>
+			</div>
+			<div class="col-lg-6 col-md-12 ">
+				<div class="appointment-image">
+					<img src="{% static "img/contact-img.png" %}" alt="#">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- End Appointment -->
+{% include "footer.html" %}
+{% endblock %}
